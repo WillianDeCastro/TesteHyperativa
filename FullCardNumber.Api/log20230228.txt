@@ -1,0 +1,52 @@
+2023-02-28 12:22:26.097 -03:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-02-28 12:22:26.251 -03:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-02-28 12:22:26.258 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-02-28 12:22:26.261 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-02-28 12:22:26.291 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-02-28 12:22:26.324 -03:00 [INF] No migrations were applied. The database is already up to date.
+2023-02-28 12:22:26.328 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-02-28 12:22:26.353 -03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-02-28 12:22:27.127 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Cards] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-02-28 12:22:27.269 -03:00 [INF] User profile is available. Using 'C:\Users\oilha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-02-28 12:22:27.594 -03:00 [INF] Now listening on: https://localhost:7219
+2023-02-28 12:22:27.596 -03:00 [INF] Now listening on: http://localhost:5021
+2023-02-28 12:22:27.603 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-28 12:22:27.604 -03:00 [INF] Hosting environment: Development
+2023-02-28 12:22:27.607 -03:00 [INF] Content root path: C:\Users\oilha\OneDrive\Área de Trabalho\Willian\TESTE_HIPERATIVA\Teste\FullCardNumberProject\FullCardNumber.Api\
+2023-02-28 12:22:30.164 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - -
+2023-02-28 12:22:31.137 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - - - 200 - text/html;charset=utf-8 980.3930ms
+2023-02-28 12:22:31.229 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - -
+2023-02-28 12:22:31.229 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - -
+2023-02-28 12:22:31.239 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 9.2530ms
+2023-02-28 12:22:31.311 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 81.4737ms
+2023-02-28 12:22:31.527 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - -
+2023-02-28 12:22:31.843 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 315.4110ms
